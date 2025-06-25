@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>3D Image Viewer </title>
+  <title>Image Gallery - Vashnavi Wedding Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
@@ -12,8 +12,7 @@
 
     body {
       margin: 0;
-      background: #111;
-      background: url("photo8.jpg") no-repeat center center fixed;
+      background: #111 url("photo8.jpg") no-repeat center center fixed;
       font-family: sans-serif;
       text-align: center;
       color: white;
@@ -21,19 +20,18 @@
     }
 
     .site-title {
-      font-family: Sevillana;
-      font-size: 3.1rem;
+      font-family: Sevillana, cursive;
+      font-size: 3rem;
       font-weight: bold;
       color: #31ea10;
       text-shadow: 0 0 10px rgb(239, 53, 59), 0 0 15px rgb(7, 144, 190), 0 0 20px rgb(239, 22, 239);
-      margin-bottom: 20px;
-      letter-spacing: 2px;
+      margin: 20px auto;
     }
 
     .note {
       padding: 12px 25px;
       font-size: 1.1rem;
-      margin: 40px auto 60px;
+      margin: 20px auto 30px;
       border-radius: 14px;
       background: linear-gradient(#111, #111) padding-box,
         linear-gradient(135deg, pink, green, blue, red) border-box;
@@ -43,46 +41,31 @@
       font-weight: bold;
     }
 
-    .carousel-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      padding: 40px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .carousel {
-      position: relative;
-      width: 90vw;
-      height: 65vw;
-      max-width: 600px;
-      max-height: 400px;
-      transform-style: preserve-3d;
-      animation: rotate 20s linear infinite;
-      margin: 40px 0;
-    }
-
-    .carousel:hover {
-      animation-play-state: paused;
-    }
-
-    .carousel img {
-      position: absolute;
-      width: 220px;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-      transition: transform 0.5s;
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      animation: zoomPan 12s ease-in-out infinite;
     }
 
-    @keyframes rotate {
-      from {
-        transform: rotateY(0deg);
-      }
 
-      to {
-        transform: rotateY(360deg);
-      }
+    .image-gallery img:hover {
+      animation-play-state: paused;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff33cc, 0 0 30px #33ccff;
     }
 
     .popup {
@@ -109,45 +92,9 @@
         linear-gradient(270deg, pink, green, blue, red, pink) border-box;
       background-origin: border-box;
       background-clip: padding-box, border-box;
-      box-shadow:
-        0 0 12px pink,
-        0 0 15px green,
-        0 0 18px blue,
-        0 0 20px red;
+      box-shadow: 0 0 12px pink, 0 0 15px green, 0 0 18px blue, 0 0 20px red;
       animation: borderGlow 5s linear infinite;
       background-size: 400% 400%;
-    }
-
-    @media (max-width: 768px) {
-      .carousel {
-        width: 100vw;
-        height: 75vw;
-      }
-
-      .carousel img {
-        width: 60vw;
-        height: auto;
-      }
-
-      .note {
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
-
-      .scroll-section {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 1s ease, transform 1s ease;
-      }
-
-      .scroll-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .spacer {
-        height: 150px;
-      }
     }
 
     @keyframes borderGlow {
@@ -179,6 +126,39 @@
       z-index: 999;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
+
+    @media (max-width: 600px) {
+      .site-title {
+        font-size: 2rem;
+      }
+
+      .note {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+
+    @keyframes zoomPan {
+      0% {
+        transform: scale(1) translateX(0);
+      }
+
+      25% {
+        transform: scale(1.05) translateX(5px);
+      }
+
+      50% {
+        transform: scale(1) translateX(0);
+      }
+
+      75% {
+        transform: scale(1.05) translateX(-5px);
+      }
+
+      100% {
+        transform: scale(1) translateX(0);
+      }
+    }
   </style>
 </head>
 
@@ -186,38 +166,28 @@
 
   <div class="site-title">Vashnavi Wedding Studio</div>
 
-  <div class="note">
-    Click on image to view in big size or fullscreen
-  </div>
+  <div class="note">Click on any image to view it in fullscreen</div>
 
-  <div class="carousel-wrapper">
-
-    <div class="carousel" id="carousel1">
-      <img src="photo1.jpg" alt="1">
-      <img src="photo2.jpg" alt="2">
-      <img src="photo3.jpg" alt="3">
-      <img src="photo4.jpg" alt="4">
-      <img src="photo5.jpg" alt="5">
-      <img src="photo11.jpg" alt="11">
-      <img src="photo12.jpg" alt="12">
-      <img src="photo13.jpg" alt="13">
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="carousel scroll-section" id="carousel2">
-      <img src="photo6.jpg" alt="6">
-      <img src="photo7.jpg" alt="7">
-      <img src="photo8.jpg" alt="8">
-      <img src="photo9.jpg" alt="9">
-      <img src="photo10.jpg" alt="10">
-    </div>
-
+  <div class="image-gallery">
+    <img src="photo1.jpg" alt="1">
+    <img src="photo2.jpg" alt="2">
+    <img src="photo3.jpg" alt="3">
+    <img src="photo4.jpg" alt="4">
+    <img src="photo5.jpg" alt="5">
+    <img src="photo6.jpg" alt="6">
+    <img src="photo7.jpg" alt="7">
+    <img src="photo8.jpg" alt="8">
+    <img src="photo9.jpg" alt="9">
+    <img src="photo10.jpg" alt="10">
+    <img src="photo11.jpg" alt="11">
+    <img src="photo12.jpg" alt="12">
+    <img src="photo13.jpg" alt="13">
   </div>
 
   <div class="popup" id="popup">
     <img id="popup-img" src="" alt="Popup Image">
   </div>
+
   <footer class="developer-info">
     <h5>Developed by: Ankit Kumar</h5>
     <h5>Phone: 7903863590</h5>
@@ -225,64 +195,22 @@
   </footer>
 
   <script>
-    function setupCarousel(carouselId) {
-      const carousel = document.getElementById(carouselId);
-      const images = carousel.getElementsByTagName("img");
-      const total = images.length;
-
-      const getRadius = () => {
-        const min = 200;
-        const max = 400;
-        return Math.min(max, min + total * 25);
-      };
-
-      function arrangeImages() {
-        const radius = getRadius();
-        for (let i = 0; i < total; i++) {
-          const angle = (360 / total) * i;
-          images[i].style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
-        }
-      }
-
-      for (let img of images) {
-        img.addEventListener("click", function () {
-          popupImg.src = this.src;
-          popup.style.display = "flex";
-        });
-      }
-
-      arrangeImages();
-      window.addEventListener("resize", arrangeImages);
-    }
-
     const popup = document.getElementById("popup");
     const popupImg = document.getElementById("popup-img");
 
-    popup.addEventListener("click", function () {
+    document.querySelectorAll(".image-gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.style.display = "flex";
+      });
+    });
+
+    popup.addEventListener("click", () => {
       popup.style.display = "none";
       popupImg.src = "";
     });
-
-    setupCarousel("carousel1");
-    setupCarousel("carousel2");
-
-    const scrollSection = document.querySelector('.scroll-section');
-    const isSmallDevice = window.matchMedia("(max-width: 768px)").matches;
-
-    if (isSmallDevice) {
-      window.addEventListener('scroll', () => {
-        const rect = scrollSection.getBoundingClientRect();
-        const revealPoint = window.innerHeight - 150;
-
-        if (rect.top < revealPoint) {
-          scrollSection.classList.add('visible');
-        }
-      });
-    } else {
-
-      scrollSection.classList.add('visible');
-    }
   </script>
+
 </body>
 
 </html>
