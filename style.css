@@ -244,3 +244,75 @@ footer.main-footer {
 .icon.whatsapp:hover {
   color: #25d366;
 }
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .glossy-btn {
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .animated-text {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  .developer-info {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  footer.main-footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
