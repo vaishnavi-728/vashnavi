@@ -55,11 +55,11 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="number" placeholder="Mobile No" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+      <form onsubmit="sendWhatsAppMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="number" id="phone" placeholder="Mobile No" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -71,11 +71,28 @@
     <h5>Email: ankit8597286@gmail.com</h5>
   </div>
 
-
   <footer class="main-footer">
     <p>&copy; 2025 Vaishnavi Wedding Studio. All rights reserved.</p>
   </footer>
 
-</body>
+  <!-- WhatsApp Message Script -->
+  <script>
+    function sendWhatsAppMessage(event) {
+      event.preventDefault();
 
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const fullMessage = `Name: ${name}%0aPhone: ${phone}%0aEmail: ${email}%0aMessage: ${message}`;
+
+      const whatsappNumber = "917979019334"; // Your WhatsApp number without "+" or spaces
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
+
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+
+</body>
 </html>
