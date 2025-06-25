@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Our Album Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,
+  500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:
+  ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            background: url("image4.jpg") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #151414;
+
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .site-title {
+            font-family: Sevillana;
+            font-size: 3.1rem;
+            font-weight: bold;
+            color: #31ea10;
+            text-shadow: 0 0 10px rgb(239, 53, 59), 0 0 15px rgb(7, 144, 190), 0 0 20px rgb(239, 22, 239);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .note {
+            padding: 12px 25px;
+            color: white;
+            font-size: 25px;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            font-family: sevillana;
+            background: linear-gradient(#111, #111) padding-box,
+                linear-gradient(135deg, pink, green, blue, red) border-box;
+            border: 3px solid transparent;
+            box-shadow:
+                0 0 20px pink,
+                0 0 25px green,
+                0 0 30px blue,
+                0 0 35px red;
+            max-width: 90%;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .image-block {
+            text-align: center;
+
+        }
+
+        .glow-wrapper {
+            position: relative;
+            padding: 24px;
+
+            border-radius: 38px;
+
+            z-index: 0;
+        }
+
+        .glow-wrapper::before {
+            content: "";
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            right: -16px;
+            bottom: -16px;
+            background: linear-gradient(90deg, red, green, blue, red);
+            background-size: 400% 400%;
+            border-radius: 48px;
+            animation: glowBorder 6s linear infinite;
+            z-index: -1;
+            filter: blur(10px) brightness(2);
+        }
+
+        .image-container {
+            width: 180px;
+            height: 260px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+
+        figcaption {
+            font-size: 20px;
+            color: #ccc;
+            margin-top: 25px;
+        }
+
+        @keyframes glowBorder {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .developer-info {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            color: #ccc;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 12px;
+            z-index: 999;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="site-title">Vashnavi Wedding Studio</div>
+
+    <div class="note">
+        Our Album Gallery Click on image which you want to view
+    </div>
+
+    <div class="gallery">
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="photo.jpg" alt="Image 1">
+                    </div>
+                </div>
+                <figcaption>Baby Shoot</figcaption>
+            </figure>
+        </a>
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="image2.jpg" alt="Image 2">
+                    </div>
+                </div>
+                <figcaption>Wedding shoot</figcaption>
+            </figure>
+        </a>
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="photo2.jpg" alt="Image 3">
+                    </div>
+                </div>
+                <figcaption>Image 3</figcaption>
+            </figure>
+        </a>
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="photo3.jpg" alt="Image 4">
+                    </div>
+                </div>
+                <figcaption>Image 4</figcaption>
+            </figure>
+        </a>
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="photo4.jpg" alt="Image 5">
+                    </div>
+                </div>
+                <figcaption>Image 5</figcaption>
+            </figure>
+        </a>
+
+        <a href="page 3.html" target="_blank">
+            <figure class="image-block">
+                <div class="glow-wrapper">
+                    <div class="image-container">
+                        <img src="photo5.jpg" alt="Image 6">
+                    </div>
+                </div>
+                <figcaption>Image 6</figcaption>
+
+            </figure>
+
+        </a>
+        <footer class="developer-info">
+            <h5>Developed by: Ankit Kumar</h5>
+            <h5>Phone: 7903863590</h5>
+            <h5>Email: ankit8597286@gmail.com</h5>
+        </footer>
+
+
+</body>
+
+</html>
