@@ -1,98 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vashnavi Wedding Studio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vashnavi Wedding Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="container">
-      <h1 class="logo">Vashnavi Wedding Studio</h1>
-      <nav>
-        <ul class="nav-buttons">
-          <li><a href="#home" class="glossy-btn">Home</a></li>
-          <li><a href="#about" class="glossy-btn">About</a></li>
-          <li><a href="#contact" class="glossy-btn">Contact</a></li>
-          <li><a href="page2.html" class="glossy-btn">Our Album</a></li>
-        </ul>
-      </nav>
+    <header>
+        <div class="container">
+            <h1 class="logo">Vashnavi Wedding Studio </h1>
+            <nav>
+                <ul class="nav-buttons">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h2>Vashnavi Wedding Studio</h2>
+            <p>Capture Your Precious Moments</p>
+            <a href="#contact" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Vashnavi Wedding Studio, we specialize in capturing timeless wedding memories. Our team combines
+                creativity with passion to deliver the most stunning wedding albums and films.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourprofile" target="_blank" class="icon facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vashnavi_wedding_studio1/?igsh=MTNoNnF0ZzNjcXlxag%3D%3D#"
+                    target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/7979019334" target="_blank" class="icon whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <div class="slider-wrapper">
+
+                <button class="scroll-btn left-btn">&#10094;</button>
+
+                <div class="slider">
+                    <div class="slider-item">
+                            <img src="image1.jpg" alt="Gallery Image 1">
+                            <p class="caption">Image 1</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="image2.jpg" alt="Gallery Image 2">
+                            <p class="caption">Image 2</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="image3.jpg" alt="Gallery Image 3">
+                            <p class="caption">Image 3</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="image4.jpg" alt="Gallery Image 4">
+                            <p class="caption">Image 4</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="image7.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 5</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="image6.jpg" alt="Gallery Image 6">
+                            <p class="caption">Image 6</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 7</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo1.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 8</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo2.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 9</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo3.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 10</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo4.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 11</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo5.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 12</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="photo6.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 13</p>
+                        </a>
+                    </div>
+
+                    <div class="slider-item">
+                            <img src="photo7.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 14</p>
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                            <img src="photo8.jpg" alt="Gallery Image 5">
+                            <p class="caption">Image 15</p>
+                        </a>
+                    </div>
+
+        </div>
+
+                <button class="scroll-btn right-btn">&#10095;</button>
+            </div>
+        </div>
+
+        <div id="imagePreview" class="image-preview">
+            <span class="close-btn">&times;</span>
+            <img id="previewImg" src="" alt="Preview">
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="sendBtn"> Send </button>
+        </form>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Vashnavi Wedding Studio. All rights reserved.</p>
+    </footer>
+
+    <button id="scrollUpBtn"><i class="fas fa-angle-up"></i></button>
+
+    <div id="devloper-info" onclick="this.classList.toggle('collapsed')">
+        <h5> Developed By : Ankit Kumar</h5>
+        <h5> Phone : +91 7903863590 </h5>
+        <h5> Gmail : ankit8597286@gmail.com </h5>
     </div>
-  </header>
 
-  <section id="home" class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <a href="https://wa.me/7979019334" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
 
-    <div class="hero-content frosted-box">
-      <h2 class="animated-text">Vashnavi Wedding Studio</h2>
-      <p>Capture Your Precious Moments</p>
-      <a href="#contact" class="btn">Book Now</a>
-    </div>
-  </section>
+    <a href="tel:+917979019334" class="call-btn" aria-label="Call Now">
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Call" />
+    </a>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>At Vashnavi Wedding Studio, we specialize in capturing timeless wedding memories. Our team combines creativity
-        with passion to deliver the most stunning wedding albums and films.</p>
-    </div>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/yourprofile" target="_blank" class="icon facebook"><i
-          class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/vashnavi_wedding_studio1/?igsh=MTNoNnF0ZzNjcXlxag%3D%3D#" target="_blank"
-        class="icon instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/+917979019334" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form onsubmit="sendWhatsAppMessage(event)">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="number" id="phone" placeholder="Mobile No" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <div class="developer-info">
-    <h5>Developed by: Ankit Kumar</h5>
-    <h5>Phone: 7903863590</h5>
-    <h5>Email: ankit8597286@gmail.com</h5>
-  </div>
-
-  <footer class="main-footer">
-    <p>&copy; 2025 Vaishnavi Wedding Studio. All rights reserved.</p>
-  </footer>
-
-  <!-- WhatsApp Message Script -->
-  <script>
-    function sendWhatsAppMessage(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const fullMessage = `Name: ${name}%0aPhone: ${phone}%0aEmail: ${email}%0aMessage: ${message}`;
-
-      const whatsappNumber = "917979019334"; // Your WhatsApp number without "+" or spaces
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
-
-      window.open(whatsappURL, "_blank");
-    }
-  </script>
-
+    <script src="script.js"> </script>
 </body>
+
 </html>
